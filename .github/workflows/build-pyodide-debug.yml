@@ -18,16 +18,19 @@ jobs:
     steps:
       - name: Create artifact
         run: |
-          mkdir artifact
-          echo test > artifact/test
-          echo bla > artifact/bla
+          mkdir artifact-dir
+          echo test > artifact-dir/test
+          echo bla > artifact-dir/bla
 
       - name: Store artifacts build
         uses: actions/upload-artifact@v4
         with:
           name: build
           path: |
-            ./artifact
+            ./artifact-dir
+
+      - name: clean-up
+        run: rm -rf artifact
 
       - name: Download latest Pyodide debug build
         uses: actions/github-script@v6
@@ -53,7 +56,8 @@ jobs:
                 if (err) throw err;
             });
 
+
       - name: Unzip artifact
         run: |
-          unzip artifact.zip -d artifact
-          ls -ltrh artifact
+          unzip artifact.zip -d artifact-dir
+          ls -ltrh artifact-dir
