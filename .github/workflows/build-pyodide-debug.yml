@@ -30,7 +30,7 @@ jobs:
             ./artifact-dir
 
       - name: clean-up
-        run: rm -rf artifact
+        run: rm -rf artifact-dir
 
       - name: Download latest Pyodide debug build
         uses: actions/github-script@v6
