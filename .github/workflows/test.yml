@@ -1,6 +1,7 @@
 name: test
 permissions:
   contents: none
+  metadata: none
 
 on:
   push:
