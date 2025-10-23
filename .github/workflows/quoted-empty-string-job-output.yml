@@ -33,4 +33,6 @@ jobs:
       - if: ${{ needs.set-job-output.set-output.bare == '' }}
         run: |
           echo bare empty string
-
+      - if: ${{ needs.set-job-output.set-output.quoted != '' }}
+        run: |
+          echo this should not be printed
