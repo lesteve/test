@@ -1,0 +1,36 @@
+name: quoted-empty-string
+permissions:
+  contents: none
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  set-job-output:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set job output
+        id: set-output
+        run: |
+          echo "bare=" >> "$GITHUB_OUTPUT"
+          echo "quoted=''" >> "$GITHUB_OUTPUT"
+
+  consume-job-output:
+    runs-on: ubuntu-latest
+    needs: [set-job-output]
+    steps:
+      - run: |
+          echo this ran fine
+      - if: ${{ needs.set-job-output.set-output.quoted == '' }}
+        run: |
+          echo quoted empty string
+      - if: ${{ needs.set-job-output.set-output.bare == '' }}
+        run: |
+          echo bare empty string
+
