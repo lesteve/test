@@ -24,6 +24,6 @@ jobs:
       run: |
         env
         echo OPENBLAS_NUM_THREADS: $OPENBLAS_NUM_THREADS
-    - name: tmate
-      run: |
-        bash start-tmate.sh
+    # - name: tmate
+    #   run: |
+    #     bash start-tmate.sh
