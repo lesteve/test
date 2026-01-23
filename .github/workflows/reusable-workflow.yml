@@ -1,0 +1,13 @@
+name: 'Reusable workflow'
+permissions:
+  contents: read
+
+on:
+  workflow_call:
+
+jobs:
+  test-echo:
+    steps:
+      - run: echo test 1
+      - run: echo test 2
+      - run: echo test 3

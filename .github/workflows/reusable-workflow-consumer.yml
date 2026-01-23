@@ -1,0 +1,11 @@
+name: Reusable workflow consumer
+permissions:
+  contents: read
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  reusable-workflow-consumer:
+    uses: ./.github/workflows/update_tracking_issue.yml
