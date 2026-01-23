@@ -8,6 +8,8 @@ on:
       runs-on:
         required: true
         type: string
+      env-str:
+        type: string
 
 jobs:
   test-echo:
