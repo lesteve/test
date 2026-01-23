@@ -13,6 +13,7 @@ jobs:
       runs-on: ubuntu-latest
       env-str: |
         MY_BLA=1
+        MY_FOO=1
 
   reusable-workflow-consumer-win:
     env:
@@ -20,5 +21,5 @@ jobs:
     uses: ./.github/workflows/reusable-workflow.yml
     with:
       runs-on: windows-latest
-      env-str:
+      env-str: |
         MY_FOO=2
