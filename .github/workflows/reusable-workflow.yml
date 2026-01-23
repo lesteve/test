@@ -11,7 +11,7 @@ on:
 
 jobs:
   test-echo:
-    runs-on: ${{ input.runs-on }}
+    runs-on: ${{ inputs.runs-on }}
     steps:
       - run: echo test 1
       - run: echo test 2
