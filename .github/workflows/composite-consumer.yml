@@ -16,5 +16,5 @@ jobs:
       - run: |
           pwd
           ls -ltrh .github/workflows
-      - uses: ./.github/workflows/composite.yml
+      - uses: .github/composite
       - run: echo post composite
