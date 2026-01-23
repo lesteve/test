@@ -9,3 +9,5 @@ on:
 jobs:
   reusable-workflow-consumer:
     uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      runs-on: ubuntu-latest

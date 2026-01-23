@@ -4,10 +4,14 @@ permissions:
 
 on:
   workflow_call:
+  inputs:
+    runs-on:
+      required: true
+      type: string
 
 jobs:
   test-echo:
-    runs-on: ubuntu-latest
+    runs-on: ${{ input.runs-on }}
     steps:
       - run: echo test 1
       - run: echo test 2
