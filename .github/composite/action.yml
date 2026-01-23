@@ -5,5 +5,8 @@ runs:
   using: "composite"
   steps:
     - run: echo test 1
+      shell: bash
     - run: echo test 2
+      shell: bash
     - run: echo test 3
+      shell: bash
