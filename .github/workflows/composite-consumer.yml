@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: ./composite.yml
+      - uses: ./.github/workflows/composite.yml
       - run: echo post composite
