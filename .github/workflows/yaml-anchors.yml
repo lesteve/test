@@ -16,6 +16,7 @@ on:
 
 jobs:
   test1:
+    runs-on: ubuntu-latest
     steps:
       - run: echo test1
   #   name: test1
