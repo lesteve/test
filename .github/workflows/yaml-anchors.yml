@@ -3,34 +3,21 @@ permissions:
   contents: read
 
 on:
-  push:
-  pull_request:
+  push: {}
+  pull_request: {}
 
 .common-steps: &common-steps
-  - run: echo test 1
-    shell: bash
-  - run: echo test 2
-    shell: bash
-  - run: echo test 3
-    shell: bash
+  - shell: bash
+    run: echo test 1
+  - shell: bash
+    run: echo test 2
+  - shell: bash
+    run: echo test 3
 
 jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
       *common-steps
-      - run: echo test1
-  #   name: test1
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #     *common-steps
-  #     - run: echo test1
-
-  # test2:
-  #   name: test2
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #     *common-steps
-  #     - run: echo test2
+      - shell: bash
+        run: echo test1
