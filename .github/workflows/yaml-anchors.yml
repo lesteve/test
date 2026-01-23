@@ -1,0 +1,27 @@
+name: Yaml anchor
+permissions:
+  contents: read
+
+.common-steps: &steps
+  - run: echo test 1
+  - run: echo test 2
+  - run: echo test 3
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test1:
+    name: test1
+    runs-on: ubuntu-latest
+
+    steps:
+      *steps
+
+  test2:
+    name: test2
+    runs-on: ubuntu-latest
+
+    steps:
+      *steps
