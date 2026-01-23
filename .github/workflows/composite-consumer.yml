@@ -1,0 +1,16 @@
+name: Composite action consumer
+permissions:
+  contents: read
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ./composite.yml
+      - run: echo post composite
