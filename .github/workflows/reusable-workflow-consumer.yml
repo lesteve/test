@@ -16,8 +16,6 @@ jobs:
         MY_FOO=1
 
   reusable-workflow-consumer-win:
-    env:
-      MY_FOO=2
     uses: ./.github/workflows/reusable-workflow.yml
     with:
       runs-on: windows-latest
