@@ -18,6 +18,7 @@ jobs:
 
     steps:
       *common-steps
+      - run: echo test1
 
   test2:
     name: test2
@@ -25,3 +26,4 @@ jobs:
 
     steps:
       *common-steps
+      - run: echo test2
