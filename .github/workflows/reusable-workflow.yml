@@ -6,6 +6,7 @@ on:
   workflow_call:
 
 jobs:
+  runs-on: ubuntu-latest
   test-echo:
     steps:
       - run: echo test 1
