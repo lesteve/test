@@ -15,6 +15,6 @@ jobs:
       - uses: actions/checkout@v6
       - run: |
           pwd
-          ls -ltrh
+          ls -ltrh .github/workflows
       - uses: ./.github/workflows/composite.yml
       - run: echo post composite
