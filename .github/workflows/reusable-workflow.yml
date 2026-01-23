@@ -6,8 +6,8 @@ on:
   workflow_call:
 
 jobs:
-  runs-on: ubuntu-latest
   test-echo:
+    runs-on: ubuntu-latest
     steps:
       - run: echo test 1
       - run: echo test 2
