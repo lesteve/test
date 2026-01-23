@@ -9,11 +9,10 @@ on:
 jobs:
   test1:
     runs-on: ubuntu-latest
-    steps: &steps
+    steps: &common-steps
       - run: echo test1
       - run: echo test2
 
   test2:
     runs-on: ubuntu-latest
-    steps: *steps
-      - run: echo additional one
+    steps: *common-steps
