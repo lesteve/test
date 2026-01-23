@@ -4,10 +4,10 @@ permissions:
 
 on:
   workflow_call:
-  inputs:
-    runs-on:
-      required: true
-      type: string
+    inputs:
+      runs-on:
+        required: true
+        type: string
 
 jobs:
   test-echo:
