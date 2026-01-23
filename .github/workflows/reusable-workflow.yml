@@ -18,6 +18,7 @@ jobs:
       - name: Set environment variables
         run: |
           echo "${{ inputs.env-str }}" >> "$GITHUB_ENV"
+        shell: bash
       - run: env | grep MY_
         shell: bash
       - run: echo test 1
