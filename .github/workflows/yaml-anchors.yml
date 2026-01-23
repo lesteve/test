@@ -6,18 +6,9 @@ on:
   push: {}
   pull_request: {}
 
-.common-steps: &common-steps
-  - shell: bash
-    run: echo test 1
-  - shell: bash
-    run: echo test 2
-  - shell: bash
-    run: echo test 3
-
 jobs:
   test1:
     runs-on: ubuntu-latest
-    steps:
-      - *common-steps
-      - shell: bash
-        run: echo test1
+    steps: &steps
+      - run: echo test1
+      - run: echo test2
