@@ -2,7 +2,7 @@ name: Yaml anchor
 permissions:
   contents: read
 
-.common-steps: &steps
+.common-steps: &common-steps
   - run: echo test 1
   - run: echo test 2
   - run: echo test 3
@@ -17,11 +17,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      *steps
+      *common-steps
 
   test2:
     name: test2
     runs-on: ubuntu-latest
 
     steps:
-      *steps
+      *common-steps
