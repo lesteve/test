@@ -18,6 +18,6 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      *common-steps
+      - *common-steps
       - shell: bash
         run: echo test1
