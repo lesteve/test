@@ -11,3 +11,8 @@ jobs:
     uses: ./.github/workflows/reusable-workflow.yml
     with:
       runs-on: ubuntu-latest
+
+  reusable-workflow-consumer-win:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      runs-on: windows-latest
