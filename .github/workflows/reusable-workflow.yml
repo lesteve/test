@@ -13,6 +13,8 @@ jobs:
   test-echo:
     runs-on: ${{ inputs.runs-on }}
     steps:
+      - run: env | grep MY_
+        shell: bash
       - run: echo test 1
       - run: echo test 2
       - run: echo test 3
