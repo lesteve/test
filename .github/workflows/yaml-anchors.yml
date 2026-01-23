@@ -16,4 +16,4 @@ jobs:
   test2:
     runs-on: ubuntu-latest
     steps: *steps
-      - echo additional one
+      - run: echo additional one
