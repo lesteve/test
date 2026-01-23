@@ -13,5 +13,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+      - run: |
+          pwd
+          ls -ltrh
       - uses: ./.github/workflows/composite.yml
       - run: echo post composite
