@@ -8,4 +8,4 @@ on:
 
 jobs:
   reusable-workflow-consumer:
-    uses: ./.github/workflows/update_tracking_issue.yml
+    uses: ./.github/workflows/reusable-workflow.yml
