@@ -12,3 +12,7 @@ jobs:
     steps: &steps
       - run: echo test1
       - run: echo test2
+
+  test2:
+    runs-on: ubuntu-latest
+    steps: *steps
